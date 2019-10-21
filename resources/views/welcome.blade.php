@@ -3,14 +3,14 @@
 @section('title', 'Welcome')
 
 @section('content')
-        <h2>I need from the store</h2>
+        <h1>Home</h1>
         
         <ul>
         @foreach($tasks as $task)
+        
         <li>{{ $task }}</li>
+        
         @endforeach
         </ul>
-
-
         
 @endsection
