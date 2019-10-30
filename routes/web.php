@@ -29,6 +29,8 @@ Route::get('/', 'PagesController@home');
 Route::get('/contact', 'PagesController@contact');
 Route::get('/about', 'PagesController@about');
 
+Route::get('/projects', 'ProjectsController@index');
+
 /* Long winded, above is easier on the eye
 Route::get('/contact', function () { // example.com/contact
     return view('contact');
