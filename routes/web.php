@@ -29,12 +29,25 @@ Route::get('/', 'PagesController@home');
 Route::get('/contact', 'PagesController@contact');
 Route::get('/about', 'PagesController@about');
 
+
+// REPRESENTS PROJECT RESOURCE
+Route::resource('projects', 'ProjectsController');
+// equivolant to all that below
+/*
 Route::get('/projects', 'ProjectsController@index');
 Route::get('/projects/create', 'ProjectsController@create');
 //^^ responsible for displaying a view to create a new project
 Route::post('/projects', 'ProjectsController@store');
 //^^ when a user makes a post request to submit data to be processed to
 // the same end point then load action called store
+Route::get('/projects/project', 'ProjectsController@show');
+// /project represents a wildcard
+Route::get('/projects/{project}/edit', 'ProjectsController@edit');
+// edits a specific  project usnig the identifyer
+Route::patch('/projects/{project}', 'ProjectsController@update');
+// form should make patch request to end point
+Route::delete('/projects/{project}', 'ProjectsController@destroy');
+*/
 
 
 
