@@ -30,6 +30,13 @@ Route::get('/contact', 'PagesController@contact');
 Route::get('/about', 'PagesController@about');
 
 Route::get('/projects', 'ProjectsController@index');
+Route::get('/projects/create', 'ProjectsController@create');
+//^^ responsible for displaying a view to create a new project
+Route::post('/projects', 'ProjectsController@store');
+//^^ when a user makes a post request to submit data to be processed to
+// the same end point then load action called store
+
+
 
 /* Long winded, above is easier on the eye
 Route::get('/contact', function () { // example.com/contact

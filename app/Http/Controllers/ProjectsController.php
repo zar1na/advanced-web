@@ -17,4 +17,28 @@ class ProjectsController extends Controller
         // ['projects' => $projects] could be used instead of compact
         return view('projects.index', compact('projects'));
     }
+    
+    
+    public function create()
+    // create action simply loads a view
+    {
+        return view('projects.create');
+    }
+    
+    
+    public function store()
+    {
+        $project = new Project();
+        
+        $project->title = request('title');
+        $project->description = request('description');
+        
+        $project->save();
+        
+        // redirect back to view all projects (get request by default)
+        return redirect('/projects');
+        
+        //return request()->all();
+    }
+    
 }
