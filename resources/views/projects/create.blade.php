@@ -27,7 +27,7 @@
 <div class="control">
 <textarea name="description" class="textarea {{ $errors->has('description') ? 'is-danger' : '' }}">{{ old('description') }}</textarea>
 </div>
-</div>
+</div>0
 
 <div>
 <button type="submit">Create Project</button>
@@ -39,9 +39,10 @@
 <li>{{ $error }}</li>
 @endforeach
 </ul>
-</form>
+</div>
 
 <p>this view loads a form that accepts user data</p>
+<p>@include ('errors') doesn't work</p>
 
 </body>
 </html>

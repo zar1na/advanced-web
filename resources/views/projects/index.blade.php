@@ -17,4 +17,7 @@
 @endforeach
 </ul>
 
+<h3><a href="projects/create">Create a new project</a></h3>
+
+
 @endsection
