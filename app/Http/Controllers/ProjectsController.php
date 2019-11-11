@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 // pulling in the project class- imports it in
 use App\Project;
+use Illuminate\Filesystem\Filesystem;
 
 class ProjectsController extends Controller
 {
@@ -53,13 +54,18 @@ class ProjectsController extends Controller
     }
     
     
-    public function show($id) // Project $project
+    public function show(($id) // Project $project
     {
         $project = Project::findORfail($id);
         
         return view('projects.show', compact('project'));
     }
     
+    /* v21 binding in the container and fetching it
+    public function show(Filesystem $file)
+    {
+        dd($file);
+    } */
     
     public function edit($id) // responds to /projects/1/edit or whatever the user specifies
     {

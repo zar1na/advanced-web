@@ -10,6 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+/* v21
+app()->bind('example', function () {
+    return new \App\Example;
+}); // bound example into the service container 
+
+Route::get('/', function (){
+    dd(app('example'), app('example'));
+    
+    return view('welcome');
+}); // displays example instance
+*/ 
 
 Route::get('/', 'PagesController@home');
 /* Route::get('/', function () {
