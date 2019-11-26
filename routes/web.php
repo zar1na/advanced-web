@@ -10,6 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+/* v21 12:32
+app()->singleton('twitter', function () {
+    return new \App\Services\Twitter('dndnjsnfjn');
+}); /* want a singleton and to be equal to new instance of the twitter class
+that accepts the api-key through constructor */
+
 /* v21
 app()->bind('example', function () {
     return new \App\Example;
@@ -22,7 +28,14 @@ Route::get('/', function (){
 }); // displays example instance
 */ 
 
-Route::get('/', 'PagesController@home');
+use App\Services\Twitter;
+Route::get('/', function (Twitter $twitter) {
+    dd('$twitter');
+    
+    return view('welcome');
+});
+
+// Route::get('/', 'PagesController@home');
 /* Route::get('/', function () {
     
     $tasks = [

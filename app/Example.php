@@ -4,5 +4,10 @@ namespace App;
 
 class Example
 {
-    // v21
+    protected $foo;
+    
+    public function __construct(Foo $foo)
+    {
+        $this->foo = $foo;
+    }
 }

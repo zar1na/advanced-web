@@ -54,8 +54,16 @@ class ProjectsController extends Controller
     }
     
     
-    public function show(($id) // Project $project
-    {
+    public function show($id) {
+    /* V21
+     * public function show(Project $project)
+     * { $twitter = app('twitter'); REQUESTED OUT OF THE CONTAINER AND DD ONTO PAGE
+     * dd($twitter);
+     * 
+     * return view('projects.show', compact('project'));
+     * }
+     */
+    
         $project = Project::findORfail($id);
         
         return view('projects.show', compact('project'));
