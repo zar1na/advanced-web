@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 // pulling in the project class- imports it in
 use App\Project;
-use Illuminate\Filesystem\Filesystem;
+use App\Services\Twitter;
+// use Illuminate\Filesystem\Filesystem;
 
 class ProjectsController extends Controller
 {
@@ -54,17 +55,14 @@ class ProjectsController extends Controller
     }
     
     
-    public function show($id) {
-    /* V21
-     * public function show(Project $project)
-     * { $twitter = app('twitter'); REQUESTED OUT OF THE CONTAINER AND DD ONTO PAGE
-     * dd($twitter);
-     * 
-     * return view('projects.show', compact('project'));
-     * }
-     */
+    public function show(Project $project, Twitter $twitter) { // public function show(Filesystem $file)
+     // auto-resolve and service container -> basic example
     
-        $project = Project::findORfail($id);
+       
+        //$project = Project::findORfail($id);
+        $twitter = app('twitter');
+        dd($twitter);
+        // requested out of service container and onto the page
         
         return view('projects.show', compact('project'));
     }
