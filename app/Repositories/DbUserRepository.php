@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 // specific implementation that conforms to the terms of the contract
-class DbUserRepository interface UserRepository {
+class DbUserRepository implements UserRepository {
     
     public function create($attributes) {
         
