@@ -10,7 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-// v21 12:32
+
+/* v21 12:32
 app()->singleton('App\Services\Twitter', function () { // class path
     return new \App\Services\Twitter('fgfghgiuuit');
 });
@@ -20,6 +21,7 @@ Route::get('/', function () {
     
     return view('welcome');
 });
+/*
 
 /* want a singleton and to be equal to new instance of the twitter class
 that accepts the api-key through constructor */

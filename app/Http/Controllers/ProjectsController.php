@@ -55,13 +55,13 @@ class ProjectsController extends Controller
     }
     
     
-    public function show(Project $project, Twitter $twitter) { // public function show(Filesystem $file)
+     // public function show(Project $project, Twitter $twitter) { // public function show(Filesystem $file)
      // auto-resolve and service container -> basic example
-    
+     public function show($id) {
        
-        //$project = Project::findORfail($id);
-        $twitter = app('twitter');
-        dd($twitter);
+        $project = Project::findORfail($id);
+       // $twitter = app('twitter');
+        //dd($twitter);
         // requested out of service container and onto the page
         
         return view('projects.show', compact('project'));
