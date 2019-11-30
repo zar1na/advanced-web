@@ -22,7 +22,7 @@ class Project extends Model
     // relationship (project has many tasks)
     }
     
-    public function addTask($description)
+     public function addTask($description)
     {
         $this->tasks()->create(compact('description'));
         // alrady knows associated project it wil apply project id based on current instance
@@ -33,6 +33,7 @@ class Project extends Model
         */
         
     }
+    
     
 }
 

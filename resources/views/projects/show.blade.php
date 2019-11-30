@@ -30,7 +30,7 @@
 </p>
 
 
-<form method="POST" action="/projects/{{ $project->id }}/tasks" class="box"SS>
+<form method="POST" action="/projects/{{ $project->id }}/tasks" class="box">
 {{ csrf_field() }}
 
 <div class="field">
