@@ -1,10 +1,7 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\Task;
 use App\Project;
-
 class ProjectsTasksController extends Controller
 {
     public function store(Project $project)

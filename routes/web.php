@@ -28,14 +28,7 @@ Route::get('/', function (){
 }); // displays example instance
 */ 
 
-use App\Services\Twitter;
-Route::get('/', function (Twitter $twitter) {
-    dd('$twitter');
-    
-    return view('welcome');
-});
-
-// Route::get('/', 'PagesController@home');
+Route::get('/', 'PagesController@home');
 /* Route::get('/', function () {
     
     $tasks = [
