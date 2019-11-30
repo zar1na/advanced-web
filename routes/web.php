@@ -10,19 +10,27 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-use App\Repositories\UserRepository;
-Route::get('/', function (UserRepository $users) {
-    dd($users);
+use App\Services\Twitter;
+Route::get('/', function (Twitter $twitter) {
+    dd($twitter);
     return view('welcome');
 });
 
 
 
 
-//use App\Services\Twitter;
+
+/* episode 22
+ * use App\Repositories\UserRepository;
+ * Route::get('/', function (UserRepository $users) {
+    dd($users);
+    return view('welcome');
+ * });
+ * 
+ */
 
 /* v21 12:32
+use App\Services\Twitter;
 app()->singleton('App\Services\Twitter', function () { // class path
     return new \App\Services\Twitter('fgfghgiuuit');
 });

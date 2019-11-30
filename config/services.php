@@ -36,7 +36,7 @@ return [
     ],
     
     'twitter' => [
-        'key' => 'public-key',
-        'secret' => 'private-key'
+        'key' => env('TWITTER_KEY'),
+        'secret' => env('TWITTER_SECRET')
     ]
-];
+]; // config('services.(key_needed)')
