@@ -2,7 +2,9 @@
 
 namespace App\Services;
 
-class Twitter {
+class Twitter
+
+{
     
     protected $apiKey;
     

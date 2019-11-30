@@ -11,6 +11,17 @@
 |
 */
 
+use App\Repositories\UserRepository;
+Route::get('/', function (UserRepository $users) {
+    dd($users);
+    return view('welcome');
+});
+
+
+
+
+//use App\Services\Twitter;
+
 /* v21 12:32
 app()->singleton('App\Services\Twitter', function () { // class path
     return new \App\Services\Twitter('fgfghgiuuit');
@@ -38,7 +49,7 @@ Route::get('/', function (){
 }); // displays example instance from app\example
 */ 
 
-Route::get('/', 'PagesController@home');
+// WELCOME.BLADE.PHP Route::get('/', 'PagesController@home');
 /* Route::get('/', function () {
     
     $tasks = [
